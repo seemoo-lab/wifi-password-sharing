@@ -21,13 +21,14 @@ brew install libsodium
 ## Run
 
 We provide both the grantor and requestor roles.
+You can use the Xcode application or `make` to build the project.
 
 ### Grantor
 
-Run the target `PWS-Grantor` to start a password sharing giving device client, which will scan BLE advertisements and connect to the first matching one and start sharing. Alternatively, from the command line:
+Run the target `PWS-Grantor` to start a password sharing giving device client, which will scan BLE advertisements and connect to the first matching one and start sharing. Alternatively, when built via `make`:
 
 ```bash
-./PWS-Grantor <ssid> <psk>
+build/DerivedData/Build/Products/Debug/PWS-Grantor <ssid> <psk>
 ```
 
 ### Requestor
@@ -43,10 +44,10 @@ nvram boot-args="amfi_get_out_of_my_way=0x1"
 
 **Step 2:** Since we can not set the manufacturer data of a BLE advertisement with `CoreBluetooth`, we provide a GATT relay server in [`python-gatt-relay`](python-gatt-relay). Setup the relay on an external Linux machine, e.g., a Raspberry Pi 4. See the included [`README`](python-gatt-relay/README.md) for details.
 
-**Step 3:** Finally, run the `PWS-Requestor` target to ask for a password from another device. Alternatively, from the command line:
+**Step 3:** Finally, run the `PWS-Requestor` target to ask for a password from another device. Alternatively, when built via `make`:
 
 ```bash
-./PWS-Requestor <appleID> <gattServerAddress>
+build/DerivedData/Build/Products/Debug/PWS-Requestor <appleID> <gattServerAddress>
 ```
 
 ## Authors
