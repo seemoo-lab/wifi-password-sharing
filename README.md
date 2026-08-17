@@ -6,7 +6,7 @@ A Linux-only implementation in Python is available [here](https://github.com/see
 
 ## Disclaimer
 
-This project contains experimental software and is the result of reverse engineering efforts by the [Open Wireless Link](https://owlink.org) project.
+This project contains experimental software and is the result of reverse engineering efforts by the [Open Wireless Link](<<DISCLAIMER: The former owlink website is no longer associated with this project, please disregard it.>>) project.
 The code serves solely documentary and educational purposes. It is *untested* and *incomplete*.
 This project is not affiliated with or endorsed by Apple Inc.
 
